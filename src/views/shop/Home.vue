@@ -4,7 +4,8 @@
     <div class="banner-section">
       <el-carousel height="400px">
         <el-carousel-item v-for="item in banners" :key="item.id">
-          <div class="banner-item" :style="{ background: item.color }">
+          <div class="banner-item">
+            <img :src="item.image" :alt="item.title" />
             <div class="banner-content">
               <h2>{{ item.title }}</h2>
               <p>{{ item.desc }}</p>
@@ -98,9 +99,9 @@ import { ref } from 'vue'
 
 // 轮播图数据
 const banners = ref([
-  { id: 1, title: '春季新品上市', desc: '精选优质商品，限时优惠', color: '#409EFF' },
-  { id: 2, title: '品质生活节', desc: '满减活动火热进行中', color: '#67C23A' },
-  { id: 3, title: '会员专享福利', desc: '注册即享新人礼包', color: '#E6A23C' }
+  { id: 1, title: '春季新品上市', desc: '精选优质商品，限时优惠', image: 'https://picsum.photos/1920/400?random=10' },
+  { id: 2, title: '品质生活节', desc: '满减活动火热进行中', image: 'https://picsum.photos/1920/400?random=11' },
+  { id: 3, title: '会员专享福利', desc: '注册即享新人礼包', image: 'https://picsum.photos/1920/400?random=12' }
 ])
 
 // 分类数据
@@ -138,13 +139,24 @@ const newProducts = ref([
 
   .banner-item {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
 
     .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
       color: #fff;
+      z-index: 1;
 
       h2 {
         font-size: 42px;

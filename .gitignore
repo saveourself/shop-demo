@@ -1,0 +1,84 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+*.lcov
+.nyc-output
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs used in the coverage
+lib-cov
+
+# Build outputs
+dist
+dist-ssr
+*.local
+build
+
+# Cache
+.cache
+.eslintcache
+.stylelintcache
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vite
+vite.config.ts.vitest-temp
+vite.config.ts.vitest-baseline
+
+# Playwright
+playwright-report
+playwright/.cache
+test-results
+
+# Storybook
+storybook-static
+
+# Temporary files
+*.tmp
+*.temp
+.temp
+.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Lock files (keep package-lock.json but ignore others)
+yarn.lock
+pnpm-lock.yaml

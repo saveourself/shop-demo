@@ -1,3 +1,6 @@
+# Claude settings
+.claude/
+
 # Logs
 logs
 *.log
